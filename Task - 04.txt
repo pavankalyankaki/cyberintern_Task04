@@ -1,0 +1,95 @@
+**Task - 04**
+
+CYBER SECURITY INTERNSHIP
+
+Task 4: Setup and Use a Firewall on Windows/Linux
+Objective
+Configure and test basic firewall rules to allow or block traffic.
+Tools
+
+Windows: Windows Firewall
+Linux: UFW (Uncomplicated Firewall)
+
+Deliverables
+Screenshot/configuration file showing firewall rules applied.
+
+Hints/Mini Guide
+
+Open firewall configuration tool (Windows Firewall or terminal for UFW)
+List current firewall rules
+Add a rule to block inbound traffic on a specific port (e.g., 23 for Telnet)
+Test the rule by attempting to connect to that port locally or remotely
+Add rule to allow SSH (port 22) if on Linux
+Remove the test block rule to restore original state
+Document commands or GUI steps used
+Summarize how firewall filters traffic
+
+Outcome
+Basic firewall management skills and understanding of network traffic filtering.
+
+Interview Questions & Answers
+1. What is a firewall?
+A firewall is a network security device or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It acts as a barrier between trusted internal networks and untrusted external networks (like the internet), filtering traffic to prevent unauthorized access and cyber threats.
+2. Difference between stateful and stateless firewall?
+
+Stateful Firewall: Tracks the state of active connections and makes decisions based on the context of traffic flow. It remembers previous packets and connection states, providing better security by understanding the full conversation context.
+Stateless Firewall: Examines each packet independently without considering the connection state or previous packets. It makes filtering decisions based solely on packet headers (source/destination IP, ports, protocols).
+
+3. What are inbound and outbound rules?
+
+Inbound Rules: Control traffic coming into your network or system from external sources. They determine what external connections are allowed to reach your services.
+Outbound Rules: Control traffic leaving your network or system to external destinations. They determine what internal systems can connect to external services.
+
+4. How does UFW simplify firewall management?
+UFW (Uncomplicated Firewall) simplifies firewall management by:
+
+Providing simple, human-readable commands instead of complex iptables syntax
+Using intuitive commands like ufw allow 22 instead of lengthy iptables rules
+Offering easy enable/disable functionality
+Providing clear status displays and rule listings
+Reducing configuration errors through simplified syntax
+
+5. Why block port 23 (Telnet)?
+Port 23 (Telnet) should be blocked because:
+
+Unencrypted communication: All data, including passwords, is transmitted in plain text
+Security vulnerability: Susceptible to eavesdropping and man-in-the-middle attacks
+Legacy protocol: Modern secure alternatives like SSH (port 22) provide encrypted communication
+Compliance requirements: Many security standards require disabling insecure protocols
+
+6. What are common firewall mistakes?
+
+Default deny policy not implemented: Allowing all traffic by default instead of denying
+Overly permissive rules: Opening too many ports or allowing broad IP ranges
+Not documenting rules: Making it difficult to maintain and audit
+Ignoring outbound traffic: Focusing only on inbound rules while neglecting outbound filtering
+Not regular updates: Failing to review and update rules as network requirements change
+Weak logging: Not enabling proper logging for monitoring and incident response
+
+7. How does a firewall improve network security?
+Firewalls improve network security by:
+
+Access control: Blocking unauthorized access attempts and malicious traffic
+Traffic filtering: Inspecting packets and blocking suspicious or unwanted communications
+Network segmentation: Creating security zones and controlling inter-zone communication
+Threat prevention: Stopping known attack patterns and malicious IP addresses
+Monitoring capabilities: Providing logs and alerts for security analysis
+Compliance support: Helping meet regulatory requirements for network security
+
+8. What is NAT in firewalls?
+NAT (Network Address Translation) in firewalls is a technique that:
+
+Translates IP addresses: Converts private internal IP addresses to public IP addresses for internet communication
+Hides internal structure: Conceals internal network topology from external networks
+Enables address reuse: Allows multiple internal devices to share a single public IP address
+Provides security layer: Acts as an implicit firewall by preventing direct external access to internal devices
+Port mapping: Can redirect specific ports from public IP to internal services
+
+
+Key Concepts
+
+Firewall configuration
+Network traffic filtering
+Ports
+UFW
+Windows Firewall
